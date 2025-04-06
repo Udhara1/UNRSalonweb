@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lumière Salon | Luxury Hair & Beauty</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Custom CSS */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1522337360788-8b13dee7a37e');
+            background-size: cover;
+            background-position: center;
+        }
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .testimonial-card {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+        }
+    </style>
+</head>
+<body class="font-serif text-gray-800">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white bg-opacity-90 shadow-sm z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex-shrink-0 flex items-center">
+                    <span class="text-2xl font-light tracking-wider text-pink-700">LUMIÈRE</span>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-center space-x-8">
+                        <a href="#home" class="text-pink-700 px-3 py-2 text-sm font-medium">Home</a>
+                        <a href="#services" class="text-gray-700 hover:text-pink-700 px-3 py-2 text-sm font-medium">Services</a>
+                        <a href="#about" class="text-gray-700 hover:text-pink-700 px-3 py-2 text-sm font-medium">About</a>
+                        <a href="#testimonials" class="text-gray-700 hover:text-pink-700 px-3 py-2 text-sm font-medium">Testimonials</a>
+                        <a href="#contact" class="text-gray-700 hover:text-pink-700 px-3 py-2 text-sm font-medium">Contact</a>
+                        <a href="#book" class="bg-pink-700 text-white px-6 py-2 rounded-full text-sm font-medium hover:bg-pink-800 transition duration-300">Book Now</a>
+                    </div>
+                </div>
+                <div class="md:hidden">
+                    <button id="menu-toggle" class="text-gray-700 hover:text-pink-700 focus:outline-none">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white py-4 px-6 shadow-lg">
+            <a href="#home" class="block text-pink-700 py-2">Home</a>
+            <a href="#services" class="block text-gray-700 hover:text-pink-700 py-2">Services</a>
+            <a href="#about" class="block text-gray-700 hover:text-pink-700 py-2">About</a>
+            <a href="#testimonials" class="block text-gray-700 hover:text-pink-700 py-2">Testimonials</a>
+            <a href="#contact" class="block text-gray-700 hover:text-pink-700 py-2">Contact</a>
+            <a href="#book" class="block bg-pink-700 text-white px-4 py-2 rounded-full text-center mt-2 hover:bg-pink-800 transition duration-300">Book Now</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero h-screen flex items-center pt-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
+            <h1 class="text-4xl md:text-6xl font-light mb-6">Experience Luxury Beauty</h1>
+            <p class="text-xl md:text-2xl font-light mb-10 max-w-3xl mx-auto">Where elegance meets exceptional service in our tranquil oasis of beauty and relaxation.</p>
+            <a href="#book" class="bg-pink-700 text-white px-10 py-3 rounded-full text-lg font-medium hover:bg-pink-800 transition duration-300">Book Your Appointment</a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-light text-gray-800 mb-4">Our Services</h2>
+                <div class="w-20 h-0.5 bg-pink-700 mx-auto"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-10">
+                <!-- Service 1 -->
+                <div class="service-card bg-white p-8 rounded-lg shadow-md transition duration-300">
+                    <div class="text-pink-700 mb-4">
+                        <i class="fas fa-cut text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-medium mb-3">Hair Styling</h3>
+                    <p class="text-gray-600 mb-4">From precision cuts to creative coloring, our master stylists create looks that complement your unique beauty.</p>
+                    <p class="text-pink-700 font-medium">From $85</p>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="service-card bg-white p-8 rounded-lg shadow-md transition duration-300">
+                    <div class="text-pink-700 mb-4">
+                        <i class="fas fa-spa text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-medium mb-3">Spa Treatments</h3>
+                    <p class="text-gray-600 mb-4">Rejuvenate with our luxurious facials, body treatments, and massage therapies designed to restore balance.</p>
+                    <p class="text-pink-700 font-medium">From $120</p>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="service-card bg-white p-8 rounded-lg shadow-md transition duration-300">
+                    <div class="text-pink-700 mb-4">
+                        <i class="fas fa-paint-brush text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-medium mb-3">Nail Care</h3>
+                    <p class="text-gray-600 mb-4">Pamper yourself with our manicures, pedicures, and nail art services using premium products.</p>
+                    <p class="text-pink-700 font-medium">From $45</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="md:flex items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10">
+                    <img src="https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1" alt="Salon interior" class="rounded-lg shadow-xl w-full">
+                </div>
+                <div class="md:w-1/2">
+                    <h2 class="text-3xl font-light text-gray-800 mb-6">About Our Salon</h2>
+                    <p class="text-gray-600 mb-6">Founded in 2010, Lumière Salon has been dedicated to providing exceptional beauty services in an atmosphere of luxury and relaxation. Our team of highly trained professionals stays at the forefront of industry trends and techniques.</p>
+                    <p class="text-gray-600 mb-8">We believe that beauty should be an experience that engages all the senses. From the moment you enter our doors, you'll be enveloped in an environment designed to soothe, inspire, and transform.</p>
+                    <div class="flex items-center">
+                        <div class="mr-6">
+                            <div class="text-3xl text-pink-700 font-light mb-1">12+</div>
+                            <div class="text-gray-600">Years Experience</div>
+                        </div>
+                        <div class="mr-6">
+                            <div class="text-3xl text-pink-700 font-light mb-1">15+</div>
+                            <div class="text-gray-600">Professional Staff</div>
+                        </div>
+                        <div>
+                            <div class="text-3xl text-pink-700 font-light mb-1">5K+</div>
+                            <div class="text-gray-600">Happy Clients</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-light text-gray-800 mb-4">Client Testimonials</h2>
+                <div class="w-20 h-0.5 bg-pink-700 mx-auto"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card p-8 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 italic mb-6">"The best salon experience I've ever had! My stylist listened carefully to what I wanted and delivered beyond my expectations. The ambiance is so relaxing and the staff are incredibly talented."</p>
+                    <div class="flex items-center">
+                        <img src="https://randomuser.me/api/portraits/women/43.jpg" alt="Sarah J." class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-medium">Sarah J.</h4>
+                            <p class="text-gray-600 text-sm">Client since 2018</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card p-8 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 italic mb-6">"I've been coming to Lumière for years and wouldn't trust anyone else with my hair. They consistently deliver exceptional results and make me feel pampered every visit."</p>
+                    <div class="flex items-center">
+                        <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Michelle R." class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-medium">Michelle R.</h4>
+                            <p class="text-gray-600 text-sm">Client since 2015</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Booking Section -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-light text-gray-800 mb-4">Contact Us</h2>
+                <div class="w-20 h-0.5 bg-pink-700 mx-auto"></div>
+            </div>
+            
+            <div class="md:flex">
+                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10">
+                    <h3 class="text-xl font-medium mb-6">Book Your Appointment</h3>
+                    <form id="book" class="space-y-4">
+                        <div>
+                            <input type="text" placeholder="Full Name" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-pink-300">
+                        </div>
+                        <div>
+                            <input type="email" placeholder="Email Address" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-pink-300">
+                        </div>
+                        <div>
+                            <input type="tel" placeholder="Phone Number" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-pink-300">
+                        </div>
+                        <div>
+                            <select class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-pink-300">
+                                <option>Select Service</option>
+                                <option>Hair Cut & Styling</option>
+                                <option>Hair Coloring</option>
+                                <option>Spa Treatment</option>
+                                <option>Manicure/Pedicure</option>
+                                <option>Makeup Application</option>
+                            </select>
+                        </div>
+                        <div>
+                            <textarea placeholder="Special Requests" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-pink-300"></textarea>
+                        </div>
+                        <button type="submit" class="bg-pink-700 text-white px-8 py-3 rounded-full font-medium hover:bg-pink-800 transition duration-300 w-full">Request Appointment</button>
+                    </form>
+                </div>
+                
+                <div class="md:w-1/2 md:pl-10">
+                    <h3 class="text-xl font-medium mb-6">Visit Us</h3>
+                    <div class="mb-8">
+                        <div class="flex items-start mb-4">
+                            <i class="fas fa-map-marker-alt text-pink-700 mt-1 mr-3"></i>
+                            <div>
+                                <h4 class="font-medium">Address</h4>
+                                <p class="text-gray-600">123 Beauty Avenue<br>New York, NY 10001</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start mb-4">
+                            <i class="fas fa-phone-alt text-pink-700 mt-1 mr-3"></i>
+                            <div>
+                                <h4 class="font-medium">Phone</h4>
+                                <p class="text-gray-600">(212) 555-1234</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start mb-4">
+                            <i class="fas fa-envelope text-pink-700 mt-1 mr-3"></i>
+                            <div>
+                                <h4 class="font-medium">Email</h4>
+                                <p class="text-gray-600">hello@lumiere-salon.com</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-clock text-pink-700 mt-1 mr-3"></i>
+                            <div>
+                                <h4 class="font-medium">Hours</h4>
+                                <p class="text-gray-600">
+                                    Monday - Friday: 9am - 8pm<br>
+                                    Saturday: 9am - 6pm<br>
+                                    Sunday: 10am - 4pm
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-gray-100 p-6 rounded-lg">
+                        <h4 class="font-medium mb-4">Follow Us</h4>
+                        <div class="flex space-x-4">
+                            <a href="#" class="text-pink-700 hover:text-pink-800 text-xl"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="text-pink-700 hover:text-pink-800 text-xl"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="text-pink-700 hover:text-pink-800 text-xl"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="text-pink-700 hover:text-pink-800 text-xl"><i class="fab fa-pinterest-p"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="md:flex md:justify-between">
+                <div class="mb-8 md:mb-0">
+                    <span class="text-2xl font-light tracking-wider text-pink-400">LUMIÈRE</span>
+                    <p class="mt-4 text-gray-400 max-w-md">Where beauty meets elegance and every visit leaves you feeling refreshed and radiant.</p>
+                </div>
+                <div class="grid grid-cols-2 gap-8 md:grid-cols-3">
+                    <div>
+                        <h3 class="text-sm font-semibold text-gray-300 tracking-wider uppercase mb-4">Quick Links</h3>
+                        <ul class="space-y-2">
+                            <li><a href="#home" class="text-gray-400 hover:text-white">Home</a></li>
+                            <li><a href="#services" class="text-gray-400 hover:text-white">Services</a></li>
+                            <li><a href="#about" class="text-gray-400 hover:text-white">About</a></li>
+                            <li><a href="#contact" class="text-gray-400 hover:text-white">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-sm font-semibold text-gray-300 tracking-wider uppercase mb-4">Services</h3>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="text-gray-400 hover:text-white">Hair Styling</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white">Color Services</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white">Spa Treatments</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white">Nail Care</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-sm font-semibold text-gray-300 tracking-wider uppercase mb-4">Legal</h3>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="text-gray-400 hover:text-white">Privacy Policy</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white">Terms of Service</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white">Cancellation Policy</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-12 pt-8 border-t border-gray-800 text-center text-gray-400 text-sm">
+                <p>© 2023 Lumière Salon. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile menu toggle
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+                
+                // Close mobile menu if open
+                document.getElementById('mobile-menu').classList.add('hidden');
+            });
+        });
+
+        // Change navbar background on scroll
+        window.addEventListener('scroll', function() {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('shadow-lg');
+                nav.classList.remove('bg-opacity-90');
+                nav.classList.add('bg-opacity-100');
+            } else {
+                nav.classList.remove('shadow-lg');
+                nav.classList.add('bg-opacity-90');
+                nav.classList.remove('bg-opacity-100');
+            }
+        });
+    </script>
+</body>
+</html>
